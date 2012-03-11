@@ -66,14 +66,21 @@ call pathogen#runtime_append_all_bundles()
   set selection=exclusive
   set selectmode=mouse,key
 
+" Set mapleader
+  let mapleader = ","
+  let g:mapleader = ","
+
 " 设置自动保存
   imap <F9> <Esc>:up<cr>
 
-" 把 F8 映射到 启动NERDTree插件
+
+"	下面是插件设置区域
+"	===================================
+" 把 F4 映射到 切换NERDTree插件
   let NERDTreeShowBookmarks = 1
   let NERDChristmasTree = 1
   let NERDTreeWinPos = "left"
-  map <F8> :NERDTree<CR>
+	map <F4> :NERDTreeToggle<cr>
 
 " 在不同的窗口移动
   map <C-j> <C-W>j
@@ -82,7 +89,6 @@ call pathogen#runtime_append_all_bundles()
   map <C-l> <C-W>l
 
 " 设置FuzzyFinder
-  let mapleader = "\\"
   map <leader>F :FufFile<CR>
   map <leader>f :FufTaggedFile<CR>
   map <leader>g :FufTag<CR>
@@ -94,6 +100,3 @@ call pathogen#runtime_append_all_bundles()
 
 " 设置Rubytest
   let g:rubytest_cmd_spec = "rspec -fd %p"
-
-" 设置SuperTab
-  let g:SuperTabRetainCompletionType="context"
