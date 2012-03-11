@@ -35,6 +35,8 @@ MY Vim Rails
 	vim-fugitive：		git插件，自称最好的git插件啦，插件不怎么滴，提供的git视频教程却不错
 	vim-rspec
 	MinibufferExpl.vim 显示buffer导航栏
+	a.vim
+	autocomplpop.vim
 
 简单使用方法 ：
   pathogen
