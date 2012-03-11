@@ -44,9 +44,28 @@ call pathogen#runtime_append_all_bundles()
   set incsearch
 
 " tab宽度
-  set tabstop=4
-  set cindent shiftwidth=4
-  set autoindent shiftwidth=4
+  "set tabstop=4
+  "set cindent shiftwidth=4
+  "set autoindent shiftwidth=4
+	set shiftwidth=2
+	set softtabstop=2
+	set tabstop=2
+	set backspace=2
+	set smarttab
+
+	set lbr
+
+"	Auto indent
+	set ai
+
+"	Smart indet
+	set si
+
+"	C-style indenting
+	set cindent
+
+"	Wrap line
+	set wrap
 
 " 命令行下按tab键自动完成
   set wildmode=list:full
@@ -73,6 +92,30 @@ call pathogen#runtime_append_all_bundles()
 " 设置自动保存
   imap <F9> <Esc>:up<cr>
 
+" 在不同的窗口移动
+  map <C-j> <C-W>j
+  map <C-k> <C-W>k
+  map <C-h> <C-W>h
+  map <C-l> <C-W>l
+	map <C-i> <C-W><C-W>
+
+"	Tab configuration
+	map <leader>tn :tabnew .<cr>
+	map <leader>tc :tabclose<cr>
+	map <leader>tm :tabn<cr>
+	map <leader>tp :tabp<cr>
+
+"	Moving fast to front, back and 2 sides ;)
+	imap <m-$> <esc>$a
+	imap <m-0> <esc>0i
+	imap <D-$> <esc>$a
+	imap <D-0> <esc>0i
+
+"	fast close the buffer
+	nmap <leader>q :bd<cr> 
+
+" Fast saving
+	nmap <leader>w :w!<cr>
 
 "	下面是插件设置区域
 "	===================================
@@ -82,11 +125,15 @@ call pathogen#runtime_append_all_bundles()
   let NERDTreeWinPos = "left"
 	map <F4> :NERDTreeToggle<cr>
 
-" 在不同的窗口移动
-  map <C-j> <C-W>j
-  map <C-k> <C-W>k
-  map <C-h> <C-W>h
-  map <C-l> <C-W>l
+" MinibufferExpl
+""""""""""""""""""""""""""""""
+	let g:miniBufExplModSelTarget = 1
+	let g:miniBufExplModSelTarget = 0
+	let g:miniBufExplUseSingleClick = 1
+	let g:miniBufExplMapWindowNavVim = 1
+	let g:miniBufExplMapWindowNavArrows = 1
+	let g:miniBufExplMapCTabSwitchBufs = 1
+
 
 " 设置FuzzyFinder
   map <leader>F :FufFile<CR>
@@ -95,8 +142,12 @@ call pathogen#runtime_append_all_bundles()
   map <leader>b :FufBuffer<CR>
 
 " 设置Color-Sample
-  map <silent><F3> :NEXTCOLOR<cr>
-  map <silent><F2> :PREVCOLOR<cr>
+	map <leader>1 :NEXTCOLOR<cr>
+	map <leader>2 :PREVCOLOR<cr>
 
 " 设置Rubytest
   let g:rubytest_cmd_spec = "rspec -fd %p"
+
+" 设置a.vim
+""""""""""""""""""""""""""""""
+	map <leader>a :A<cr>
