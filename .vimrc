@@ -1,5 +1,5 @@
 " 启动vim时窗口的大小
-  set lines=30 columns=120
+  "set lines=30 columns=120
 
 " 不兼容VI键盘，使用vim键盘
   set nocompatible
@@ -44,9 +44,6 @@ call pathogen#runtime_append_all_bundles()
   set incsearch
 
 " tab宽度
-  "set tabstop=4
-  "set cindent shiftwidth=4
-  "set autoindent shiftwidth=4
 	set shiftwidth=2
 	set softtabstop=2
 	set tabstop=2
@@ -79,6 +76,11 @@ call pathogen#runtime_append_all_bundles()
 
 " 通过使用: commands命令，告诉我们文件的哪一行被改变过
   set report=0
+
+"	Set 7 lines to the curors - when moving vertical..
+	set so=7
+"	The commandbar is 2 high
+	set cmdheight=2
 
 " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
   set mouse=a
@@ -117,6 +119,12 @@ call pathogen#runtime_append_all_bundles()
 " Fast saving
 	nmap <leader>w :w!<cr>
 
+" following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 "	下面是插件设置区域
 "	===================================
 " 把 F4 映射到 切换NERDTree插件
@@ -147,7 +155,3 @@ call pathogen#runtime_append_all_bundles()
 
 " 设置Rubytest
   let g:rubytest_cmd_spec = "rspec -fd %p"
-
-" 设置a.vim
-""""""""""""""""""""""""""""""
-	map <leader>a :A<cr>
