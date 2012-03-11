@@ -69,7 +69,7 @@ call pathogen#runtime_append_all_bundles()
   set wildmenu
 
 " 设置默认的颜色
-  colorscheme pyte
+  colorscheme molokai 
 
 " 带有如下符号的单词不要被换行分割
   set iskeyword+=_,$,@,%,#,-
