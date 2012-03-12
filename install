@@ -1,6 +1,6 @@
 #!/bin/bash
 
-/*checkout the vim plugins and copy the .vimrc*/
+#checkout the vim plugins and copy the .vimrc
 
 git submodule init
 git submodule update
