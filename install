@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 /*checkout the vim plugins and copy the .vimrc*/
 
