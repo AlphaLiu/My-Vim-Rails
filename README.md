@@ -1,5 +1,4 @@
-
-####README for Alpha Liu fork
+####README for Alpha fork
 安装:
  1 先确认自己$HOME下没有.vim文件夹了，有就删了
  2 $cd ~
