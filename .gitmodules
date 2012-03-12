@@ -43,9 +43,6 @@
 [submodule "bundle/vim-octopress"]
 	path = bundle/vim-octopress
 	url = git://github.com/tangledhelix/vim-octopress.git
-[submodule "bundle/snipmate.vim"]
-	path = bundle/snipmate.vim
-	url = git@github.com:azhao1981/snipmate.vim.git
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = git://github.com/tpope/vim-markdown.git
@@ -55,3 +52,6 @@
 [submodule "bundle/autocomplpop"]
 	path = bundle/autocomplpop
 	url = git://github.com/vim-scripts/AutoComplPop.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/azhao1981/snipmate.vim.git
