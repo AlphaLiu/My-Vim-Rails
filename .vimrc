@@ -18,6 +18,7 @@ call pathogen#runtime_append_all_bundles()
 		let g:rubycomplete_buffer_loading = 1
 		let g:rubycomplete_classes_in_global = 1
 		"let g:rubycomplete_rails = 1
+		"
 " 禁止生成临时文件
   set nobackup
   set noswapfile
@@ -78,6 +79,8 @@ call pathogen#runtime_append_all_bundles()
   set wildmode=list:full
   set wildmenu
 
+" 设置默认gvim的字体大小
+	set gfn=Monaco:h16
 " 设置默认的颜色
   colorscheme molokai 
 
