@@ -8,6 +8,16 @@ call pathogen#runtime_append_all_bundles()
   filetype on
   filetype plugin indent on
 
+	autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+	if has("autocmd") && exists("+omnifunc")
+		  autocmd Filetype *
+			        \ if &omnifunc == "" |
+			        \   setlocal omnifunc=syntaxcomplete#Complete |
+			        \ endif
+		endif
+		let g:rubycomplete_buffer_loading = 1
+		let g:rubycomplete_classes_in_global = 1
+		"let g:rubycomplete_rails = 1
 " 禁止生成临时文件
   set nobackup
   set noswapfile
