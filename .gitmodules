@@ -16,9 +16,6 @@
 [submodule "bundle/vim-rubytest"]
 	path = bundle/vim-rubytest
 	url = git://github.com/janx/vim-rubytest.git
-[submodule "bundle/autoclose"]
-	path = bundle/autoclose
-	url = git://github.com/vim-scripts/AutoClose.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git
@@ -58,3 +55,6 @@
 [submodule "bundle/vim-ruby"]
 	path = bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = git://github.com/Raimondi/delimitMate.git
