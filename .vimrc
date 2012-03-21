@@ -144,10 +144,10 @@ endif
 
 "	下面是插件设置区域
 "	===================================
-" 把 F4 映射到 切换NERDTree插件
   let NERDTreeShowBookmarks = 1
   let NERDChristmasTree = 1
   let NERDTreeWinPos = "left"
+" 把 F4 映射到 切换NERDTree插件
 	map <F4> :NERDTreeToggle<cr>
 
 " MinibufferExpl
@@ -172,3 +172,6 @@ endif
 
 " 设置Rubytest
   let g:rubytest_cmd_spec = "rspec -fd %p"
+
+" 映射a.vim 快捷键 
+	map <leader>a :A<cr>
