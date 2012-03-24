@@ -46,9 +46,6 @@
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = git://github.com/mattn/zencoding-vim.git
-[submodule "bundle/autocomplpop"]
-	path = bundle/autocomplpop
-	url = git://github.com/vim-scripts/AutoComplPop.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git://github.com/AlphaLiu/my_snipMate.vim.git
@@ -58,3 +55,9 @@
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "bundle/neocomplcache"]
+	path = bundle/neocomplcache
+	url = git://github.com/Shougo/neocomplcache.git
+[submodule "bundle/autocomplpop"]
+	path = bundle/autocomplpop
+	url = git://github.com/vim-scripts/AutoComplPop.git

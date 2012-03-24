@@ -8,18 +8,18 @@ MY Vim Rails
 
 安装：
 新手：
- 1 先确认自己$HOME下没有.vim文件夹了，有就删了
- 2 $cd
- 3 $git clone git://github.com/azhao1981/My-Vim-Rails.git  .vim
- 4 git submodule init
- 5 git submodule update
- 6 cp .vimrc ~/.vimrc
+ 1 先确认自己$HOME下没有.vim文件夹了，有就删了
+ 2 $cd
+ 3 $git clone git://github.com/azhao1981/My-Vim-Rails.git  .vim
+ 4 git submodule init
+ 5 git submodule update
+ 6 cp .vimrc ~/.vimrc
 老手：
- 如果也喜欢，clone一个项目 ，把autoload  bundle目录拷过来就可以了。我用Pathogen来管理，大侠您就随便了
+ 如果也喜欢，clone一个项目 ，把autoload  bundle目录拷过来就可以了。我用Pathogen来管理，大侠您就随便了
 
 建议
- 自己fork一个分支
- vim最强大的地方就是可以自己改，想要什么有什么，配合github，您还有了"云vim"啦！
+ 自己fork一个分支
+ vim最强大的地方就是可以自己改，想要什么有什么，配合github，您还有了"云vim"啦！
 
 插件列表：
 	pathogen.vim		插件管理
@@ -27,6 +27,8 @@ MY Vim Rails
 	Rails.vim：			Rails插件
 	Snipmate.vim：		代码片段自动完成，神器啊
 	FuzzyFinder.vim：模糊查找，超级有用的插件
+	TabBar：					Alt+数字可切换Buffter
+	Supertab.vim：		文本自动完成
 	Rubytest.vim：		vim下的集成测试工具，自己的项目用Guard自动跑，不过要试别人的项目就要用到了
 	autoclose:			输入"("之类的会帮你补后面
 	vim-surround：		配对符修改
@@ -34,29 +36,30 @@ MY Vim Rails
 	ScrollColors		配色方案管理
 	vim-fugitive：		git插件，自称最好的git插件啦，插件不怎么滴，提供的git视频教程却不错
 	vim-rspec
-	MinibufferExpl.vim 显示buffer导航栏
-	a.vim
-	autocomplpop.vim
 
 简单使用方法 ：
-  pathogen
-  	在.vimrc里加
+  pathogen
+  	在.vimrc里加
 		# 必须在 filetype plugin indent on 之前
 		call pathogen#runtime_append_all_bundles()
 		之后插件只要放到~/.vim/bundle目录下就可以生效
 	NERDTree
-		使用:NERDTree调出目录树，或是按.vimrc里配置后用F
+		使用:NERDTree调出目录树，或是按.vimrc里配置后用F8
 	Rails
 		这个就说来话长了。。Rpreview Rmodel Rcontroller 等 等
 	Snipmate
 		tab把代码片段完成，关键是查看和修改，在snipmate.vim/snippets下，修改成自己喜欢和习惯的快捷键和代码很重要
 	FuzzyFinder
-		懒人必备，设好快捷键后各种快
+		懒人必备，设好快捷键后各种快\\F \\f
+	TabBar
+		Alt+数字可切换Buffter
+	supertab
+		输入几个字母后按下tab看看
 	Rubytest
 		不怎么用，用guard
 	autoclose:			输入"("之类的会帮你补后面
 	vim-surround：		cs"' 把"ddddd	"  变成'ddddd '
-	Color-Sampler-Pack+ScrollColors+vimrc里设置后可以用,1 or ,2来换配色
+	Color-Sampler-Pack+ScrollColors+vimrc里设置后可以用F2F3来换配色
 
 
 参考：
@@ -78,6 +81,14 @@ sudo apt-get install mercurial
 hg clone https://bitbucket.org/ns9tks/vim-l9 bundle/vim-l9
 
 http://www.vim.org/scripts/script.php?script_id=1338
+
+TabBar
+http://www.vim.org/scripts/download_script.php?src_id=4976
+装完可以使用Alt+数字来打开buffer了
+taBbar秘技：http://rickey-nctu.blogspot.com/2009/03/vim-tip-tabbar.html
+
+https://github.com/ervandew/supertab
+git clone git://github.com/ervandew/supertab.git bundle/supertab
 
 Rubytest
 https://github.com/janx/vim-rubytest
@@ -130,4 +141,4 @@ http://www.vim.org/scripts/script.php?script_id=356
 abolish:
 git clone git://github.com/tpope/vim-abolish.git
 vim-bundler
-git clone git://github.com/tpope/vim-bundler.git	
+git clone git://github.com/tpope/vim-bundler.git
